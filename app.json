@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "FirstRNProject",
-    "slug": "FirstRNProject",
+    "name": "TodoApplication",
+    "slug": "TodoApplication",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
