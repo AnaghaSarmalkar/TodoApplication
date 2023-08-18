@@ -6,7 +6,7 @@ export const style = StyleSheet.create({
     marginVertical: 8,
     marginHorizontal: 16,
   },
-  title: {
+  name: {
     fontSize: 32,
   },
 });
