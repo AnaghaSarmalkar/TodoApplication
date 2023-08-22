@@ -1,0 +1,254 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListPageDataLayer /> renders correctly for data 1`] = `
+<RNCSafeAreaView
+  edges={
+    {
+      "bottom": "additive",
+      "left": "additive",
+      "right": "additive",
+      "top": "additive",
+    }
+  }
+>
+  <RCTScrollView
+    ListHeaderComponent={
+      <Header
+        title="Todo List"
+      />
+    }
+    data={
+      [
+        {
+          "id": "1",
+          "name": "Test Location 1",
+        },
+        {
+          "id": "2",
+          "name": "Test Location 2",
+        },
+        {
+          "id": "3",
+          "name": "Test Location 3",
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={[]}
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View>
+      <View
+        collapsable={false}
+        onLayout={[Function]}
+      >
+        <View>
+          <Text
+            style={
+              {
+                "backgroundColor": "#fff",
+                "fontSize": 32,
+              }
+            }
+          >
+            Todo List
+          </Text>
+        </View>
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={false}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "marginHorizontal": 16,
+              "marginVertical": 8,
+              "opacity": 1,
+              "padding": 20,
+            }
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "fontSize": 32,
+                },
+              ]
+            }
+          >
+            Test Location 1
+          </Text>
+        </View>
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={false}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "marginHorizontal": 16,
+              "marginVertical": 8,
+              "opacity": 1,
+              "padding": 20,
+            }
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "fontSize": 32,
+                },
+              ]
+            }
+          >
+            Test Location 2
+          </Text>
+        </View>
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={false}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "marginHorizontal": 16,
+              "marginVertical": 8,
+              "opacity": 1,
+              "padding": 20,
+            }
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "fontSize": 32,
+                },
+              ]
+            }
+          >
+            Test Location 3
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</RNCSafeAreaView>
+`;
+
+exports[`<ListPageDataLayer /> renders correctly for error 1`] = `
+<View>
+  <Text>
+    Error getting resource: An error occured.
+  </Text>
+</View>
+`;
+
+exports[`<ListPageDataLayer /> renders correctly for loading 1`] = `
+<View>
+  <Text>
+    Loading . . .
+  </Text>
+</View>
+`;
