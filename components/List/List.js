@@ -1,14 +1,15 @@
 import React from "react";
-import { FlatList } from "react-native";
-import Item from "../Item/Item";
+import { FlatList, View } from "react-native";
 
-export default function List({ header, data }) {
+export default function List({ headerComponent, data, renderItem }) {
   return (
-    <FlatList
-      ListHeaderComponent={header}
-      data={data}
-      renderItem={({ item }) => <Item item={item} />}
-      keyExtractor={(item) => item.id}
-    />
+    <View>
+      <FlatList
+        ListHeaderComponent={headerComponent}
+        data={data}
+        renderItem={({ item }) => renderItem({ item })}
+        keyExtractor={(item) => item.id}
+      />
+    </View>
   );
 }

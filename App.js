@@ -12,7 +12,7 @@ const client = new ApolloClient({
 
 export default function App() {
   return (
-    <ApolloProvider client={client} children={undefined}>
+    <ApolloProvider client={client} children={null}>
       <SafeAreaProvider style={style.container}>
         <View style={styles.container}>
           <ListPageDataLayer />

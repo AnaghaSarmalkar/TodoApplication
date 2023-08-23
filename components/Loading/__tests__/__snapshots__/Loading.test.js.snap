@@ -2,8 +2,10 @@
 
 exports[` renders Loading component 1`] = `
 <ForwardRef>
-  <Text>
-    Loading . . .
-  </Text>
+  <View>
+    <Text>
+      Loading . . .
+    </Text>
+  </View>
 </ForwardRef>
 `;

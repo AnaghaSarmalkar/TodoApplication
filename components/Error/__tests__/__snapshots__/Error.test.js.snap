@@ -2,8 +2,10 @@
 
 exports[` renders Error component 1`] = `
 <ForwardRef>
-  <Text>
-    Error getting resource: Test Error Message
-  </Text>
+  <View>
+    <Text>
+      Error getting resource: Test Error Message
+    </Text>
+  </View>
 </ForwardRef>
 `;

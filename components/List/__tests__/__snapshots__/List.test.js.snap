@@ -1,21 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[` renders List component 1`] = `
-<FlatList
-  ListHeaderComponent={
-    <Header
-      title="Test Header"
-    />
-  }
-  data={
-    [
-      {
-        "id": "1",
-        "name": "Test Item name",
-      },
-    ]
-  }
-  keyExtractor={[Function]}
-  renderItem={[Function]}
-/>
+<View>
+  <FlatList
+    ListHeaderComponent={
+      <Header
+        title="Test Header"
+      />
+    }
+    data={
+      [
+        {
+          "id": "1",
+          "name": "Test Item name",
+        },
+      ]
+    }
+    keyExtractor={[Function]}
+    renderItem={[Function]}
+  />
+</View>
 `;

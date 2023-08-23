@@ -3,11 +3,12 @@
 exports[`ListPage renders List component 1`] = `
 <ForwardRef>
   <List
-    header={
+    headerComponent={
       <Header
         title="Todo List"
       />
     }
+    renderItem={[Function]}
   />
 </ForwardRef>
 `;
