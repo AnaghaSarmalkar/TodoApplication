@@ -1,16 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[` renders Header component 1`] = `
-<View>
-  <Text
-    style={
-      {
-        "backgroundColor": "#fff",
-        "fontSize": 32,
-      }
+<Text
+  style={
+    {
+      "backgroundColor": "#fff",
+      "fontSize": 32,
     }
-  >
-    Test Header Title
-  </Text>
-</View>
+  }
+>
+  Test Header Title
+</Text>
 `;

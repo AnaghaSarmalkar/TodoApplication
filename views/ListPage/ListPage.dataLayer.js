@@ -2,8 +2,8 @@ import { gql, useQuery } from "@apollo/client";
 import React from "react";
 import ListPage from "./ListPage";
 
-export const GET_LOCATIONS = gql`
-  query GetLocations {
+export const getLocationsSimple = gql`
+  query GetLocationsSimple {
     locations {
       id
       name
@@ -12,7 +12,7 @@ export const GET_LOCATIONS = gql`
 `;
 
 export default function ListPageDataLayer() {
-  const { loading, error, data } = useQuery(GET_LOCATIONS);
+  const { loading, error, data } = useQuery(getLocationsSimple);
 
   return <ListPage data={data} loading={loading} error={error} />;
 }

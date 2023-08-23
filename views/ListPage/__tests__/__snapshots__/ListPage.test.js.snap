@@ -1,6 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ListPage renders List component 1`] = `<List />`;
+exports[`ListPage renders List component 1`] = `
+<ForwardRef>
+  <List
+    header={
+      <Header
+        title="Todo List"
+      />
+    }
+  />
+</ForwardRef>
+`;
 
 exports[`ListPage renders error component 1`] = `
 <Error
