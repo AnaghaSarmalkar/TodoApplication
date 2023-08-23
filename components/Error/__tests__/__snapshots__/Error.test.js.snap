@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` renders Error component 1`] = `
+<View>
+  <Text>
+    Error getting resource: Test Error Message
+  </Text>
+</View>
+`;
