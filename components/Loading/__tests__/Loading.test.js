@@ -1,11 +1,11 @@
-import { render } from "@testing-library/react-native";
 import React from "react";
+import { shallow } from "../../../utilities/testing";
 import Loading from "../Loading";
 
 describe("", () => {
   it("renders Loading component", async () => {
-    const { toJSON } = render(<Loading />);
+    const wrapper = shallow(<Loading />);
 
-    expect(toJSON()).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });

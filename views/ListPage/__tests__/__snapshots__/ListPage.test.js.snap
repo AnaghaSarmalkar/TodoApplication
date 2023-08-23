@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListPage renders List component 1`] = `<List />`;
+
+exports[`ListPage renders error component 1`] = `
+<Error
+  message="An error occured."
+/>
+`;
+
+exports[`ListPage renders loading component 1`] = `<Loading />`;
