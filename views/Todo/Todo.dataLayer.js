@@ -1,6 +1,6 @@
 import { gql, useQuery } from "@apollo/client";
 import React from "react";
-import ListView from "./ListView";
+import Todo from "./Todo";
 
 export const getLocationsDesc = gql`
   query GetLocationsDesc {
@@ -12,8 +12,8 @@ export const getLocationsDesc = gql`
   }
 `;
 
-export default function ListViewDataLayer() {
+export default function TodoDataLayer() {
   const { loading, error, data } = useQuery(getLocationsDesc);
 
-  return <ListView loading={loading} error={error} data={data} />;
+  return <Todo loading={loading} error={error} data={data} />;
 }

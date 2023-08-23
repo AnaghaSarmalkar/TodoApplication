@@ -1,11 +1,11 @@
 import React from "react";
 import { shallow } from "../../../utilities/testing";
-import ListPage from "../ListPage";
+import TodoList from "../TodoList";
 
-describe("ListPage", () => {
+describe("TodoList", () => {
   it("renders loading component", async () => {
     const wrapper = shallow(
-      <ListPage data={undefined} loading={true} error={undefined} />
+      <TodoList data={undefined} loading={true} error={undefined} />
     );
 
     expect(wrapper).toMatchSnapshot();
@@ -14,7 +14,7 @@ describe("ListPage", () => {
   it("renders error component", async () => {
     const error = new Error("An error occured.");
     const wrapper = shallow(
-      <ListPage data={undefined} loading={false} error={error} />
+      <TodoList data={undefined} loading={false} error={error} />
     );
 
     expect(wrapper).toMatchSnapshot();
@@ -32,7 +32,7 @@ describe("ListPage", () => {
     };
 
     const wrapper = shallow(
-      <ListPage data={data} loading={false} error={undefined} />
+      <TodoList data={data} loading={false} error={undefined} />
     );
 
     expect(wrapper).toMatchSnapshot();

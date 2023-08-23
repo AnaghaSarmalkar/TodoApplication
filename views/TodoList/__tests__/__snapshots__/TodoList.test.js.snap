@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ListPage renders List component 1`] = `
+exports[`TodoList renders List component 1`] = `
 <ForwardRef>
   <List
     headerComponent={
@@ -13,10 +13,10 @@ exports[`ListPage renders List component 1`] = `
 </ForwardRef>
 `;
 
-exports[`ListPage renders error component 1`] = `
+exports[`TodoList renders error component 1`] = `
 <Error
   message="An error occured."
 />
 `;
 
-exports[`ListPage renders loading component 1`] = `<Loading />`;
+exports[`TodoList renders loading component 1`] = `<Loading />`;
