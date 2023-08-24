@@ -1,15 +1,15 @@
 import React from "react";
 import { shallow } from "../../../utilities/testing";
-import ListPageDataLayer from "../ListPage.dataLayer";
+import TodoDataLayer from "../Todo.dataLayer";
 
 jest.mock("@apollo/client", () => ({
   gql: jest.fn(),
   useQuery: jest.fn(() => ({})),
 }));
 
-describe("ListPageDataLayer", () => {
+describe("TodoDataLayer", () => {
   it("should render", () => {
-    const wrapper = shallow(<ListPageDataLayer />);
+    const wrapper = shallow(<TodoDataLayer />);
     expect(wrapper).toMatchSnapshot();
   });
 });

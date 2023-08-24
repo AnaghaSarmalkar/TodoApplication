@@ -1,6 +1,6 @@
 import { gql, useQuery } from "@apollo/client";
 import React from "react";
-import ListPage from "./ListPage";
+import TodoList from "./TodoList";
 
 export const getLocationsSimple = gql`
   query GetLocationsSimple {
@@ -11,8 +11,8 @@ export const getLocationsSimple = gql`
   }
 `;
 
-export default function ListPageDataLayer() {
+export default function TodoListDataLayer() {
   const { loading, error, data } = useQuery(getLocationsSimple);
 
-  return <ListPage data={data} loading={loading} error={error} />;
+  return <TodoList data={data} loading={loading} error={error} />;
 }

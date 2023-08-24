@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` renders Loading component 1`] = `
+<View>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 16,
+        },
+      ]
+    }
+  >
+    Test Description
+  </Text>
+</View>
+`;

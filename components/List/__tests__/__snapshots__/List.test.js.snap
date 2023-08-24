@@ -5,7 +5,7 @@ exports[` renders List component 1`] = `
   <FlatList
     ListHeaderComponent={
       <Header
-        title="Test Header"
+        title="Test Header component."
       />
     }
     data={

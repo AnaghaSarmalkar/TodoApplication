@@ -7,7 +7,7 @@ export default function List({ headerComponent, data, renderItem }) {
       <FlatList
         ListHeaderComponent={headerComponent}
         data={data}
-        renderItem={({ item }) => renderItem({ item })}
+        renderItem={renderItem}
         keyExtractor={(item) => item.id}
       />
     </View>

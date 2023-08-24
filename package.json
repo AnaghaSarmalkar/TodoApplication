@@ -8,7 +8,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "jest --watchAll --coverage",
-    "update-snapshot": "jest --updateSnapshot"
+    "update-snapshot": "jest --watchAll --updateSnapshot"
   },
   "dependencies": {
     "@apollo/client": "^3.8.1",
