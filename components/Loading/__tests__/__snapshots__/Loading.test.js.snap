@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[` renders Loading component 1`] = `
-<View>
-  <Text>
-    Loading . . .
-  </Text>
-</View>
+<ForwardRef>
+  <View>
+    <Text>
+      Loading . . .
+    </Text>
+  </View>
+</ForwardRef>
 `;

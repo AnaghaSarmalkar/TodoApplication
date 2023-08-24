@@ -1,53 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[` renders Item component 1`] = `
-<View
-  accessibilityState={
-    {
-      "busy": undefined,
-      "checked": undefined,
-      "disabled": undefined,
-      "expanded": undefined,
-      "selected": undefined,
-    }
-  }
-  accessibilityValue={
-    {
-      "max": undefined,
-      "min": undefined,
-      "now": undefined,
-      "text": undefined,
-    }
-  }
-  accessible={true}
-  collapsable={false}
-  focusable={false}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
+<Memo(Pressable)
   style={
-    {
-      "marginHorizontal": 16,
-      "marginVertical": 8,
-      "opacity": 1,
-      "padding": 20,
-    }
+    [
+      {
+        "marginHorizontal": 16,
+        "marginVertical": 8,
+        "padding": 20,
+      },
+    ]
   }
 >
-  <Text
-    style={
-      [
-        {
-          "fontSize": 32,
-        },
-      ]
-    }
-  >
-    Test Item name
-  </Text>
-</View>
+  <View>
+    <Text
+      style={
+        [
+          {
+            "fontSize": 32,
+          },
+        ]
+      }
+    >
+      Test Item name
+    </Text>
+  </View>
+</Memo(Pressable)>
 `;

@@ -1,18 +1,15 @@
 import React from "react";
-import { FlatList } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-import Header from "../Header/Header";
-import Item from "../Item/Item";
+import { FlatList, View } from "react-native";
 
-export default function List({ data }) {
+export default function List({ headerComponent, data, renderItem }) {
   return (
-    <SafeAreaView>
+    <View>
       <FlatList
-        ListHeaderComponent={<Header title="Todo List" />}
+        ListHeaderComponent={headerComponent}
         data={data}
-        renderItem={({ item }) => <Item item={item} />}
+        renderItem={renderItem}
         keyExtractor={(item) => item.id}
       />
-    </SafeAreaView>
+    </View>
   );
 }

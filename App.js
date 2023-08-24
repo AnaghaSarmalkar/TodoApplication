@@ -4,7 +4,7 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { style } from "./App.style";
-import ListPageDataLayer from "./views/ListPage/ListPage.dataLayer";
+import TodoListDataLayer from "./views/TodoList/TodoList.dataLayer";
 const client = new ApolloClient({
   uri: "https://flyby-router-demo.herokuapp.com/",
   cache: new InMemoryCache(),
@@ -15,7 +15,7 @@ export default function App() {
     <ApolloProvider client={client}>
       <SafeAreaProvider style={style.container}>
         <View style={styles.container}>
-          <ListPageDataLayer />
+          <TodoListDataLayer />
           <StatusBar style="auto" />
         </View>
       </SafeAreaProvider>

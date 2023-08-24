@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoList renders List component 1`] = `
+<ForwardRef>
+  <List
+    headerComponent={
+      <Header
+        title="Todo List"
+      />
+    }
+    renderItem={[Function]}
+  />
+</ForwardRef>
+`;
+
+exports[`TodoList renders error component 1`] = `
+<Error
+  message="An error occured."
+/>
+`;
+
+exports[`TodoList renders loading component 1`] = `<Loading />`;

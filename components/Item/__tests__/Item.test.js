@@ -1,12 +1,12 @@
-import { render } from "@testing-library/react-native";
 import React from "react";
+import { shallow } from "../../../utilities/testing";
 import Item from "../Item";
 
 describe("", () => {
   it("renders Item component", async () => {
     const item = { id: "1", name: "Test Item name" };
-    const { toJSON } = render(<Item item={item} />);
+    const wrapper = shallow(<Item item={item} />);
 
-    expect(toJSON()).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });

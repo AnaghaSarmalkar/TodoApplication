@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Todo renders error component 1`] = `
+<Error
+  message="An error occured."
+/>
+`;
+
+exports[`Todo renders loading component 1`] = `<Loading />`;
