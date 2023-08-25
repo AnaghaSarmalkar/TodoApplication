@@ -6,25 +6,53 @@ import Item from "../../components/Item/Item";
 import List from "../../components/List/List";
 import Loading from "../../components/Loading/Loading";
 
-export default function TodoList({ data, loading, error, insets }) {
-  // Use insets inside view components
+export default function TodoList({
+  data,
+  loading,
+  error,
+  insets,
+  onItemPress,
+}) {
   if (loading)
     return (
-      <View>
+      <View
+        style={{
+          flex: 1,
+          alignItems: "center",
+          justifyContent: "center",
+          paddingTop: insets.top,
+        }}
+      >
         <Loading />
       </View>
     );
   if (error)
     return (
-      <View>
+      <View
+        style={{
+          flex: 1,
+          alignItems: "center",
+          justifyContent: "center",
+          paddingTop: insets.top,
+        }}
+      >
         <Error message={error.message} />
       </View>
     );
   const header = <Header title="Todo List" />;
 
-  const renderItem = ({ item }) => <Item item={item} />;
+  const renderItem = ({ item }) => (
+    <Item item={item} onItemPress={onItemPress} />
+  );
   return (
-    <View>
+    <View
+      style={{
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        paddingTop: insets.top,
+      }}
+    >
       <List
         data={data.locations}
         headerComponent={header}

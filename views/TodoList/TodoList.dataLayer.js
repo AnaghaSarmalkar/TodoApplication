@@ -12,10 +12,21 @@ export const getLocationsSimple = gql`
   }
 `;
 
-export default function TodoListDataLayer() {
+export default function TodoListDataLayer({ navigation }) {
   const insets = useSafeAreaInsets();
+  const onPress = (id) =>
+    navigation.navigate("Todo", {
+      id: id,
+    });
   const { loading, error, data } = useQuery(getLocationsSimple);
+
   return (
-    <TodoList data={data} loading={loading} error={error} insets={insets} />
+    <TodoList
+      data={data}
+      loading={loading}
+      error={error}
+      insets={insets}
+      onItemPress={onPress}
+    />
   );
 }
