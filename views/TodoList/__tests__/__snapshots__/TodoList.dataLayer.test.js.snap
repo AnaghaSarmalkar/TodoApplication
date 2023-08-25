@@ -1,3 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TodoListDataLayer should render 1`] = `<TodoList />`;
+exports[`TodoListDataLayer should render 1`] = `
+<TodoList
+  insets={{}}
+/>
+`;
