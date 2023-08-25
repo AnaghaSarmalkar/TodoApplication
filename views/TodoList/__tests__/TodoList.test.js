@@ -5,7 +5,12 @@ import TodoList from "../TodoList";
 describe("TodoList", () => {
   it("renders loading component", async () => {
     const wrapper = shallow(
-      <TodoList data={undefined} loading={true} error={undefined} />
+      <TodoList
+        data={undefined}
+        loading={true}
+        error={undefined}
+        insets={undefined}
+      />
     );
 
     expect(wrapper).toMatchSnapshot();
@@ -14,7 +19,12 @@ describe("TodoList", () => {
   it("renders error component", async () => {
     const error = new Error("An error occured.");
     const wrapper = shallow(
-      <TodoList data={undefined} loading={false} error={error} />
+      <TodoList
+        data={undefined}
+        loading={false}
+        error={error}
+        insets={undefined}
+      />
     );
 
     expect(wrapper).toMatchSnapshot();
@@ -32,7 +42,12 @@ describe("TodoList", () => {
     };
 
     const wrapper = shallow(
-      <TodoList data={data} loading={false} error={undefined} />
+      <TodoList
+        data={data}
+        loading={false}
+        error={undefined}
+        insets={undefined}
+      />
     );
 
     expect(wrapper).toMatchSnapshot();
