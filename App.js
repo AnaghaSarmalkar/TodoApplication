@@ -2,11 +2,12 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import {
   SafeAreaProvider,
   initialWindowMetrics,
 } from "react-native-safe-area-context";
+import { styles } from "./App.style";
 import TodoDataLayer from "./views/Todo/Todo.dataLayer";
 import TodoListDataLayer from "./views/TodoList/TodoList.dataLayer";
 
@@ -26,22 +27,6 @@ const client = new ApolloClient({
   uri: "https://flyby-router-demo.herokuapp.com/",
   cache: new InMemoryCache(),
 });
-
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Home Screen</Text>
-    </View>
-  );
-}
-
-function DetailsScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Details Screen</Text>
-    </View>
-  );
-}
 
 export default function App() {
   return (
@@ -66,13 +51,3 @@ export default function App() {
     </ApolloProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    margin: "auto",
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
