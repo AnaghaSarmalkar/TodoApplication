@@ -1,5 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Todo renders Todo component 1`] = `
+<View>
+  <Header
+    title="Test Location 1"
+  />
+  <TextArea
+    description="Test Description 1"
+  />
+</View>
+`;
+
 exports[`Todo renders error component 1`] = `
 <Error
   message="An error occured."
