@@ -5,6 +5,7 @@ import Header from "../../components/Header/Header";
 import Item from "../../components/Item/Item";
 import List from "../../components/List/List";
 import Loading from "../../components/Loading/Loading";
+import { isWeb } from "../../utilities/constants";
 
 export default function TodoList({
   data,
@@ -39,7 +40,7 @@ export default function TodoList({
         <Error message={error.message} />
       </View>
     );
-  const header = <Header title="Todo List" />;
+  const header = isWeb ? <Header title="Todo List" /> : null;
 
   const renderItem = ({ item }) => (
     <Item item={item} onItemPress={onItemPress} />

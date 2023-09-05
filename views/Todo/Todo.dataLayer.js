@@ -1,8 +1,8 @@
 import { gql, useQuery } from "@apollo/client";
 import React from "react";
-import { Button, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Todo from "./Todo";
+import { onNavButtonPress } from "./Todo.utils";
 
 const GET_LOCATION = gql`
   query GetLocation($id: ID!) {
@@ -22,12 +22,14 @@ export default function TodoDataLayer({ route, navigation }) {
   });
 
   return (
-    <View>
-      <Button
-        title="Go to List page"
-        onPress={() => navigation.navigate("TodoList")}
-      />
-      <Todo loading={loading} error={error} data={data} insets={insets} />;
-    </View>
+    <Todo
+      isLoading={loading}
+      hasError={error}
+      data={data}
+      insets={insets}
+      // route={route}
+      onNavButtonPress={onNavButtonPress}
+      navigation={navigation}
+    />
   );
 }

@@ -1,5 +1,5 @@
 import { gql, useQuery } from "@apollo/client";
-import React from "react";
+import React, { useEffect } from "react";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import TodoList from "./TodoList";
 
@@ -12,13 +12,20 @@ export const getLocationsSimple = gql`
   }
 `;
 
-export default function TodoListDataLayer({ navigation }) {
+export default function TodoListDataLayer({ navigation, route }) {
   const insets = useSafeAreaInsets();
+  const { loading, error, data } = useQuery(getLocationsSimple);
+
   const onPress = (id) =>
     navigation.navigate("Todo", {
       id: id,
     });
-  const { loading, error, data } = useQuery(getLocationsSimple);
+
+  useEffect(() => {
+    navigation.setOptions({
+      title: "LOCATIONS",
+    });
+  });
 
   return (
     <TodoList

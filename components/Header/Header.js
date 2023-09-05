@@ -1,11 +1,7 @@
 import React from "react";
-import { Text, View } from "react-native";
-import { style } from "./Header.Style";
+import { Text } from "react-native";
+import { styles as basicStyles } from "./Header.Style";
 
-export default function Header({ title }) {
-  return (
-    <View>
-      <Text style={style.header}>{title}</Text>
-    </View>
-  );
+export default function Header({ styles = basicStyles, title }) {
+  return <Text style={styles.header}>{title}</Text>;
 }

@@ -1,8 +1,9 @@
 import { StyleSheet } from "react-native";
 
-export const style = StyleSheet.create({
+export const styles = StyleSheet.create({
   header: {
+    display: "flex",
     fontSize: 32,
-    backgroundColor: "#fff",
+    fontWeight: "500",
   },
 });

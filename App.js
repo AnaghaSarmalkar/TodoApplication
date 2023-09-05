@@ -2,12 +2,11 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
-import { Text, View } from "react-native";
 import {
   SafeAreaProvider,
   initialWindowMetrics,
 } from "react-native-safe-area-context";
-import { styles } from "./App.style";
+import { isAndroid, isIos } from "./utilities/constants";
 import TodoDataLayer from "./views/Todo/Todo.dataLayer";
 import TodoListDataLayer from "./views/TodoList/TodoList.dataLayer";
 
@@ -32,21 +31,24 @@ export default function App() {
   return (
     <ApolloProvider client={client}>
       <SafeAreaProvider initialMetrics={initialWindowMetrics}>
-        <View style={styles.container}>
-          <NavigationContainer
-            linking={linking}
-            fallback={
-              <View>
-                <Text>Fallback route</Text>
-              </View>
-            }
+        <NavigationContainer
+          linking={linking}
+          // fallback={
+          //   <View>
+          //     <Text>Fallback route</Text>
+          //   </View>
+          // }
+        >
+          <Stack.Navigator
+            screenOptions={{
+              headerShown: isIos || isAndroid,
+            }}
           >
-            <Stack.Navigator>
-              <Stack.Screen name="TodoList" component={TodoListDataLayer} />
-              <Stack.Screen name="Todo" component={TodoDataLayer} />
-            </Stack.Navigator>
-          </NavigationContainer>
-        </View>
+            <Stack.Screen name="TodoList" component={TodoListDataLayer} />
+            <Stack.Screen name="Todo" component={TodoDataLayer} />
+            {/* <Stack.Screen name="Home" component={HomeScreen} /> */}
+          </Stack.Navigator>
+        </NavigationContainer>
       </SafeAreaProvider>
     </ApolloProvider>
   );
