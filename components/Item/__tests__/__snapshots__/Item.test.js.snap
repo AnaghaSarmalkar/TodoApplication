@@ -1,29 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[` renders Item component 1`] = `
-<Memo(Pressable)
+<View
   style={
-    [
-      {
-        "marginHorizontal": 16,
-        "marginVertical": 8,
-        "padding": 20,
-      },
-    ]
+    {
+      "alignItems": "center",
+      "display": "flex",
+      "flexDirection": "row",
+      "padding": 10,
+    }
   }
 >
-  <View>
-    <Text
-      style={
-        [
-          {
-            "fontSize": 32,
-          },
-        ]
-      }
-    >
-      Test Item name
-    </Text>
-  </View>
-</Memo(Pressable)>
+  <Memo(Pressable)
+    onPress={[Function]}
+    style={
+      [
+        {
+          "marginHorizontal": 16,
+          "marginVertical": 8,
+          "padding": 20,
+        },
+      ]
+    }
+  >
+    <View>
+      <Text
+        style={
+          [
+            {
+              "fontSize": 32,
+            },
+          ]
+        }
+      >
+        Test Item name
+      </Text>
+    </View>
+  </Memo(Pressable)>
+</View>
 `;

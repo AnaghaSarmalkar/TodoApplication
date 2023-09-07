@@ -31,14 +31,7 @@ export default function App() {
   return (
     <ApolloProvider client={client}>
       <SafeAreaProvider initialMetrics={initialWindowMetrics}>
-        <NavigationContainer
-          linking={linking}
-          // fallback={
-          //   <View>
-          //     <Text>Fallback route</Text>
-          //   </View>
-          // }
-        >
+        <NavigationContainer linking={linking}>
           <Stack.Navigator
             screenOptions={{
               headerShown: isIos || isAndroid,
@@ -46,7 +39,6 @@ export default function App() {
           >
             <Stack.Screen name="TodoList" component={TodoListDataLayer} />
             <Stack.Screen name="Todo" component={TodoDataLayer} />
-            {/* <Stack.Screen name="Home" component={HomeScreen} /> */}
           </Stack.Navigator>
         </NavigationContainer>
       </SafeAreaProvider>
