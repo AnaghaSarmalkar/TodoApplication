@@ -8,7 +8,7 @@ describe("TodoList Utils", () => {
       };
 
       onPressTodo(navigation, 1);
-      expect(navigation.navigate).toHaveBeenCalledTimes(1);
+      expect(navigation.navigate).toHaveBeenCalledWith("Todo", { id: 1 });
     });
     test("Should do nothing if todoId is null or undefined", () => {
       const navigation = {
