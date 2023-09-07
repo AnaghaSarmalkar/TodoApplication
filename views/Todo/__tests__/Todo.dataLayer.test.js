@@ -11,10 +11,16 @@ jest.mock("react-native-safe-area-context", () => ({
   useSafeAreaInsets: jest.fn(() => ({})),
 }));
 
+jest.mock("@react-navigation/native", () => ({
+  useNavigation: jest.fn(() => ({
+    navigate: jest.fn(),
+    setOptions: jest.fn(),
+  })),
+}));
+
 describe("TodoDataLayer", () => {
   it("should render", () => {
-    const testId = 1;
-    const wrapper = shallow(<TodoDataLayer id={testId} />);
+    const wrapper = shallow(<TodoDataLayer route={{ params: { id: 1 } }} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

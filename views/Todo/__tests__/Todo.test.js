@@ -2,22 +2,30 @@ import React from "react";
 import { shallow } from "../../../utilities/testing";
 import Todo from "../Todo";
 
-const mockData = {
-  location: {
-    id: "1",
-    name: "Test Location 1",
-    description: "Test Description 1",
-  },
-};
-
 describe("Todo", () => {
+  const mockData = {
+    location: {
+      id: "1",
+      name: "Test Location 1",
+      description: "Test Description 1",
+    },
+  };
+
+  const mockInsets = {
+    top: 1,
+    right: 1,
+    bottom: 1,
+    left: 1,
+  };
+
   it("renders loading component", async () => {
     const wrapper = shallow(
       <Todo
         data={mockData}
-        loading={true}
-        error={undefined}
-        insets={undefined}
+        isLoading={true}
+        hasError={undefined}
+        insets={mockInsets}
+        onNavButtonPress={undefined}
       />
     );
 
@@ -27,7 +35,13 @@ describe("Todo", () => {
   it("renders error component", async () => {
     const error = new Error("An error occured.");
     const wrapper = shallow(
-      <Todo data={undefined} loading={false} error={error} insets={undefined} />
+      <Todo
+        data={undefined}
+        isLoading={false}
+        hasError={error}
+        insets={mockInsets}
+        onNavButtonPress={undefined}
+      />
     );
 
     expect(wrapper).toMatchSnapshot();
@@ -37,9 +51,10 @@ describe("Todo", () => {
     const wrapper = shallow(
       <Todo
         data={mockData}
-        loading={false}
-        error={undefined}
-        insets={undefined}
+        isLoading={false}
+        hasError={undefined}
+        insets={mockInsets}
+        onNavButtonPress={undefined}
       />
     );
 

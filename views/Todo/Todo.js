@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Button, Text } from "react-native";
 import Error from "../../components/Error/Error";
 import Header from "../../components/Header/Header";
@@ -13,17 +13,8 @@ export default function Todo({
   hasError,
   data,
   insets,
-  navigation,
   onNavButtonPress,
 }) {
-  useEffect(() => {
-    if (data) {
-      navigation.setOptions({
-        title: data.location.name,
-      });
-    }
-  }, [data]);
-
   if (isLoading) return <Loading />;
   if (hasError) return <Error message={hasError.message} />;
   if (data && data.location) {
@@ -31,6 +22,7 @@ export default function Todo({
       <ViewWrapper style={styles.container}>
         {isWeb && (
           <ViewWrapper style={styles.header}>
+            {/* QUESTION: How to pass custom styles to the header via ViewWrapper? Right now header has its own styles */}
             <Header title={data.location.name}></Header>
           </ViewWrapper>
         )}
@@ -38,23 +30,14 @@ export default function Todo({
           <TextArea description={data.location.description}></TextArea>
         </ViewWrapper>
         <ViewWrapper
-          style={{
-            ...styles.footer,
-            paddingBottom: isIos ? insets.bottom : 20,
-          }}
+          style={[
+            styles.footer,
+            {
+              paddingBottom: isIos ? insets.bottom : 20,
+            },
+          ]}
         >
-          <Button
-            title="Previous"
-            onPress={() => onNavButtonPress(navigation, "TodoList")}
-          />
-          <Button
-            title="Go back to List page"
-            onPress={() => onNavButtonPress(navigation, "TodoList")}
-          />
-          <Button
-            title="Next"
-            onPress={() => onNavButtonPress(navigation, "TodoList")}
-          />
+          <Button title="Go back to List page" onPress={onNavButtonPress} />
         </ViewWrapper>
       </ViewWrapper>
     );
