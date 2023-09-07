@@ -2,8 +2,9 @@ import { gql, useQuery } from "@apollo/client";
 import { useNavigation } from "@react-navigation/native";
 import React, { useCallback, useEffect } from "react";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { setPageTitle } from "../../utilities/navigation";
 import TodoList from "./TodoList";
-import { onPressTodo, setPageTitle } from "./TodoList.utils";
+import { onPressTodo } from "./TodoList.utils";
 
 export const getLocationsSimple = gql`
   query GetLocationsSimple {

@@ -5,11 +5,3 @@ export function onPressTodo(navigation, todoId) {
     });
   }
 }
-
-export function setPageTitle(navigation, title) {
-  if (title) {
-    navigation.setOptions({
-      title: title,
-    });
-  }
-}

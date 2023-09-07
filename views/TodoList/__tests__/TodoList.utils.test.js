@@ -1,4 +1,4 @@
-import { onPressTodo, setPageTitle } from "../TodoList.utils";
+import { onPressTodo } from "../TodoList.utils";
 
 describe("TodoList Utils", () => {
   describe("onPressTodo", () => {
@@ -17,24 +17,6 @@ describe("TodoList Utils", () => {
 
       onPressTodo(navigation, null);
       expect(navigation.navigate).toHaveBeenCalledTimes(0);
-    });
-  });
-  describe("setPageTitle", () => {
-    test("Should call setOptions and set title if title is given", () => {
-      const navigation = {
-        setOptions: jest.fn(),
-      };
-
-      setPageTitle(navigation, "Test");
-      expect(navigation.setOptions).toHaveBeenCalledTimes(1);
-    });
-    test("Should do nothing if title is null or undefined", () => {
-      const navigation = {
-        setOptions: jest.fn(),
-      };
-
-      setPageTitle(navigation, null);
-      expect(navigation.setOptions).toHaveBeenCalledTimes(0);
     });
   });
 });
