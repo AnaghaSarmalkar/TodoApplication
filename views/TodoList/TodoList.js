@@ -6,6 +6,7 @@ import Item from "../../components/Item/Item";
 import List from "../../components/List/List";
 import Loading from "../../components/Loading/Loading";
 import { isWeb } from "../../utilities/constants";
+import { styles } from "./TodoList.Style";
 
 export default function TodoList({
   data,
@@ -14,46 +15,32 @@ export default function TodoList({
   insets,
   onItemPress,
 }) {
+  const styleObj = [
+    styles.container,
+    {
+      paddingTop: insets.top,
+    },
+  ];
+  //QUESTION: I do have a ViewWrapper component, idk if its useful to use it in here?
   if (loading)
     return (
-      <View
-        style={{
-          flex: 1,
-          alignItems: "center",
-          justifyContent: "center",
-          paddingTop: insets.top,
-        }}
-      >
+      <View style={styleObj}>
         <Loading />
       </View>
     );
   if (error)
     return (
-      <View
-        style={{
-          flex: 1,
-          alignItems: "center",
-          justifyContent: "center",
-          paddingTop: insets.top,
-        }}
-      >
+      <View style={styleObj}>
         <Error message={error.message} />
       </View>
     );
-  const header = isWeb ? <Header title="Todo List" /> : null;
+  const header = isWeb ? <Header title="Locations List" /> : null;
 
   const renderItem = ({ item }) => (
     <Item item={item} onItemPress={onItemPress} />
   );
   return (
-    <View
-      style={{
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
-        paddingTop: insets.top,
-      }}
-    >
+    <View style={styleObj}>
       <List
         data={data.locations}
         headerComponent={header}
