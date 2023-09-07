@@ -1,20 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TodoList renders List component 1`] = `
-<View>
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      },
+      {
+        "paddingTop": 1,
+      },
+    ]
+  }
+>
   <List
-    headerComponent={
-      <Header
-        title="Todo List"
-      />
-    }
+    headerComponent={null}
     renderItem={[Function]}
   />
 </View>
 `;
 
 exports[`TodoList renders error component 1`] = `
-<View>
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      },
+      {
+        "paddingTop": 1,
+      },
+    ]
+  }
+>
   <Error
     message="An error occured."
   />
@@ -22,7 +44,20 @@ exports[`TodoList renders error component 1`] = `
 `;
 
 exports[`TodoList renders loading component 1`] = `
-<View>
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      },
+      {
+        "paddingTop": 1,
+      },
+    ]
+  }
+>
   <Loading />
 </View>
 `;

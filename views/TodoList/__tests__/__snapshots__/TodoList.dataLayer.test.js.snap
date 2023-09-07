@@ -3,5 +3,6 @@
 exports[`TodoListDataLayer should render 1`] = `
 <TodoList
   insets={{}}
+  onItemPress={[Function]}
 />
 `;

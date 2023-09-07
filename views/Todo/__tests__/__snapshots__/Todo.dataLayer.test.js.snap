@@ -3,5 +3,6 @@
 exports[`TodoDataLayer should render 1`] = `
 <Todo
   insets={{}}
+  onNavButtonPress={[Function]}
 />
 `;

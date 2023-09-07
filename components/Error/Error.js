@@ -1,11 +1,12 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Text } from "react-native";
+import ViewWrapper from "../../utilities/ViewWrapper";
 
 export default function Error({ message }) {
   const errorText = `Error getting resource: ${message}`;
   return (
-    <View>
+    <ViewWrapper>
       <Text>{errorText}</Text>
-    </View>
+    </ViewWrapper>
   );
 }
