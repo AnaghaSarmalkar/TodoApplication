@@ -1,14 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Todo renders Todo component 1`] = `
-<View>
-  <Header
-    title="Test Location 1"
-  />
-  <TextArea
-    description="Test Description 1"
-  />
-</View>
+<ViewWrapper
+  style={
+    {
+      "alignItems": "center",
+      "display": "flex",
+      "flex": 1,
+      "flexDirection": "column",
+      "paddingLeft": 20,
+      "paddingRight": 20,
+      "paddingTop": 20,
+    }
+  }
+>
+  <ViewWrapper
+    style={
+      {
+        "flex": 1,
+      }
+    }
+  >
+    <TextArea
+      description="Test Description 1"
+    />
+  </ViewWrapper>
+  <ViewWrapper
+    style={
+      [
+        {
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+          "marginBottom": 0,
+          "width": "100%",
+        },
+        {
+          "paddingBottom": 1,
+        },
+      ]
+    }
+  >
+    <Button
+      title="Go back to List page"
+    />
+  </ViewWrapper>
+</ViewWrapper>
 `;
 
 exports[`Todo renders error component 1`] = `

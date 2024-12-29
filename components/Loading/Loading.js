@@ -1,12 +1,13 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Text } from "react-native";
+import ViewWrapper from "../../utilities/ViewWrapper";
 
 // Can take optional props to customize loading
 export default function Loading() {
   const loadingText = "Loading . . .";
   return (
-    <View>
+    <ViewWrapper>
       <Text>{loadingText}</Text>
-    </View>
+    </ViewWrapper>
   );
 }

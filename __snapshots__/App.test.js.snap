@@ -8,10 +8,7 @@ exports[`<App /> renders correctly 1`] = `
       {
         "flex": 1,
       },
-      {
-        "flex": 1,
-        "marginTop": 0,
-      },
+      undefined,
     ]
   }
 />

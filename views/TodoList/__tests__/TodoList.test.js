@@ -3,13 +3,21 @@ import { shallow } from "../../../utilities/testing";
 import TodoList from "../TodoList";
 
 describe("TodoList", () => {
+  // Is there an alternative than passing mockInsets like this?
+  const mockInsets = {
+    top: 1,
+    right: 1,
+    bottom: 1,
+    left: 1,
+  };
   it("renders loading component", async () => {
     const wrapper = shallow(
       <TodoList
         data={undefined}
         loading={true}
         error={undefined}
-        insets={undefined}
+        insets={mockInsets}
+        onItemPress={undefined}
       />
     );
 
@@ -23,7 +31,8 @@ describe("TodoList", () => {
         data={undefined}
         loading={false}
         error={error}
-        insets={undefined}
+        insets={mockInsets}
+        onItemPress={undefined}
       />
     );
 
@@ -46,7 +55,8 @@ describe("TodoList", () => {
         data={data}
         loading={false}
         error={undefined}
-        insets={undefined}
+        insets={mockInsets}
+        onItemPress={undefined}
       />
     );
 
