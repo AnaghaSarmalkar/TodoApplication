@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/TodoApplication/static/js/main.6444d1ce.js",
+    "static/js/566.89ecebea.js": "/TodoApplication/static/js/566.89ecebea.js",
+    "favicon.ico": "/TodoApplication/favicon.ico",
+    "index.html": "/TodoApplication/index.html",
+    "favicon-32.png": "/TodoApplication/favicon-32.png",
+    "favicon-16.png": "/TodoApplication/favicon-16.png",
+    "manifest.json": "/TodoApplication/manifest.json",
+    "serve.json": "/TodoApplication/serve.json",
+    "main.6444d1ce.js.map": "/TodoApplication/static/js/main.6444d1ce.js.map",
+    "566.89ecebea.js.map": "/TodoApplication/static/js/566.89ecebea.js.map"
+  },
+  "entrypoints": [
+    "static/js/566.89ecebea.js",
+    "static/js/main.6444d1ce.js"
+  ]
+}
